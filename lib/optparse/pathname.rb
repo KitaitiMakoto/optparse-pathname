@@ -1,5 +1,6 @@
-module Optparse
-  module Pathname
-    # Your code goes here...
-  end
+require 'optparse'
+require 'pathname'
+
+OptionParser.accept Pathname do |path|
+  Pathname.new path if path
 end
