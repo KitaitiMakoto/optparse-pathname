@@ -3,7 +3,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["KitaitiMakoto@gmail.com"]
   gem.description   = %q{Make Pathname class one of options OptionParser's option can accept}
   gem.summary       = %q{Make Pathanme acceptable to OptionParser}
-  gem.homepage      = "https://gitorious.org/optparse"
+  gem.homepage      = "https://github.com/KitaitiMakoto/optparth-pathname"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
