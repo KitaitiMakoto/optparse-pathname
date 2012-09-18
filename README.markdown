@@ -32,7 +32,7 @@ Your command file(bin/my-command here):
     options = {}
     parser = OptionParser.new
     parser.on '-f', '--file=FILE', Pathname do |path|
-      unless path.file?
+      unless path.file? # methods of Pathname are available
         warn 'ERROR: `file` option must be an existing file'
         raise OptionParser::InvalidArgument
       end
@@ -40,8 +40,8 @@ Your command file(bin/my-command here):
     end
     parser.parse!
     
-    puts options[:path].class
-    puts options[:path].expand_path
+    puts options[:path].class #=> "Pathname"
+    puts options[:path].expand_path # methods of Pathname are available
 
 You will see like this:
 
